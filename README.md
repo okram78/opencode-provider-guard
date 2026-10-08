@@ -2,15 +2,13 @@
 
 Restricts which providers OpenCode can use in selected directories. Useful for
 keeping personal, pay-as-you-go providers out of work projects. It blocks
-disallowed providers; it never switches models, accounts, or providers for you.
+disallowed providers.
 
 ## Compatibility
 
 - OpenCode **V2**; tested against `@opencode/plugin` 2.0.24.
 - Bun 1.4.2 for development. Node.js 22.12+ is required for Node-based use; the
   published ESM also works with Bun.
-- This is an initial release candidate. The package is not automatically
-  activated, and the npm package name/version below are not a claim of publication.
 
 ## Build and enable
 
