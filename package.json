@@ -1,9 +1,20 @@
 {
-  "name": "opencode-provider-guard",
+  "name": "@okram78/opencode-provider-guard",
   "version": "0.1.0",
   "description": "Path-based provider allowlists for OpenCode V2",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okram78/opencode-provider-guard"
+  },
+  "homepage": "https://github.com/okram78/opencode-provider-guard#readme",
+  "bugs": {
+    "url": "https://github.com/okram78/opencode-provider-guard/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=22.12"
   },

@@ -43,7 +43,7 @@ To enable the plugin, add it to your **global** OpenCode config
 
 Use a global entry so the guard loads in every project. Preserve other config
 settings. After publication, the local path can be replaced with
-`opencode-provider-guard@0.1.0`.
+`@okram78/opencode-provider-guard@1.0.0`.
 
 ## Rules
 
