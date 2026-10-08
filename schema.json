@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OpenCode Provider Guard options",
+  "description": "Path-based exact provider allowlists. Matching rules intersect.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["rules"],
+  "properties": {
+    "rules": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["root", "allowProviders"],
+        "properties": {
+          "root": {
+            "type": "string",
+            "minLength": 1,
+            "description": "An absolute directory or ~/ path, including its descendants. No globbing. Paths are validated for the host platform at runtime.",
+            "pattern": "^(?!\\s)(?!.*[\\u0000*?])(?!.*\\s$)(?:~(?:/.*)?|/.*|[A-Za-z]:[\\\\/].*|\\\\\\\\[^\\\\]+\\\\[^\\\\]+.*)$"
+          },
+          "allowProviders": {
+            "type": "array",
+            "description": "Exact, case-sensitive provider IDs. Empty means deny all. Duplicates are harmless and deduplicated at runtime.",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*$(?![\\s\\S])"
+            }
+          }
+        }
+      }
+    }
+  }
+}
