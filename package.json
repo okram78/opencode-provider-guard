@@ -21,6 +21,7 @@
     "src",
     "schema.json",
     "README.md",
+    "assets",
     "LICENSE"
   ],
   "keywords": [

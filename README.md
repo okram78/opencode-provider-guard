@@ -4,6 +4,8 @@ Restricts which providers OpenCode can use in selected directories. Useful for
 keeping personal, pay-as-you-go providers out of work projects. It blocks
 disallowed providers.
 
+![OpenCode's model picker shows models from multiple providers in personal projects and only GitHub Copilot models in work.](assets/provider-guard-demo.gif)
+
 ## Compatibility
 
 - OpenCode **V2**; tested against `@opencode/plugin` 2.0.24.
