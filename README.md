@@ -12,11 +12,18 @@ disallowed providers.
 - Bun 1.4.2 for development. Node.js 22.12+ is required for Node-based use; the
   published ESM also works with Bun.
 
-## Build and enable
+## Install and enable
+
+Install the published package with Bun:
 
 ```sh
-bun install --frozen-lockfile
-bun run check
+bun add @okram78/opencode-provider-guard
+```
+
+Or with npm:
+
+```sh
+npm i @okram78/opencode-provider-guard
 ```
 
 To enable the plugin, add it to your **global** OpenCode config
@@ -27,7 +34,7 @@ To enable the plugin, add it to your **global** OpenCode config
   "$schema": "https://opencode.ai/config.json",
   "plugins": [
     {
-      "package": "/absolute/path/to/opencode-provider-guard/dist",
+      "package": "@okram78/opencode-provider-guard@1.0.0",
       "options": {
         "rules": [
           {
@@ -42,8 +49,8 @@ To enable the plugin, add it to your **global** OpenCode config
 ```
 
 Use a global entry so the guard loads in every project. Preserve other config
-settings. After publication, the local path can be replaced with
-`@okram78/opencode-provider-guard@1.0.0`.
+settings. For local development, build the package and replace the `package`
+value with the absolute path to its `dist` directory.
 
 ## Rules
 
