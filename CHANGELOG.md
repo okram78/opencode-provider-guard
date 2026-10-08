@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/okram78/opencode-provider-guard/compare/v1.0.0...v1.0.1) (2026-10-08)
+
+
+### Bug Fixes
+
+* normalize npm repository metadata ([e835f7c](https://github.com/okram78/opencode-provider-guard/commit/e835f7ce9048883c9fa58cb7d9e00d46a3ffccfa))
+
 ## [1.0.0](https://github.com/okram78/opencode-provider-guard/compare/v0.1.0...v1.0.0) (2026-10-08)
 
 
