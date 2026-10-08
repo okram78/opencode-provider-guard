@@ -8,7 +8,6 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  id-token: write
 
 jobs:
   release-please:
@@ -20,30 +19,3 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
-
-      - uses: actions/checkout@v7
-        if: ${{ steps.release.outputs.release_created }}
-
-      - uses: oven-sh/setup-bun@v2
-        if: ${{ steps.release.outputs.release_created }}
-        with:
-          bun-version: 1.4.2
-
-      - uses: actions/setup-node@v7
-        if: ${{ steps.release.outputs.release_created }}
-        with:
-          node-version: 24
-          registry-url: https://registry.npmjs.org
-          package-manager-cache: false
-
-      - run: bun install --frozen-lockfile
-        if: ${{ steps.release.outputs.release_created }}
-
-      - run: bun run check
-        if: ${{ steps.release.outputs.release_created }}
-
-      - run: npm pack --dry-run
-        if: ${{ steps.release.outputs.release_created }}
-
-      - run: npm publish --access public
-        if: ${{ steps.release.outputs.release_created }}
